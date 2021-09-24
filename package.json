@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "兰之 <lanzhi_lee@163.com>",
   "license": "MIT",
+  "scripts": {
+    "publish": "npx lerna publish"
+  },
   "devDependencies": {
     "lerna": "^4.0.0",
     "zx": "^4.2.0"
