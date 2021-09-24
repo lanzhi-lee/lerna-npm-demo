@@ -1,0 +1,18 @@
+{
+  "name": "@lanzhi/lerna-npm-demo1",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "兰之 <lanzhi_lee@163.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}
