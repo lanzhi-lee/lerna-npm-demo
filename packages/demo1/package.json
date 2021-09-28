@@ -5,22 +5,31 @@
   "author": "兰之 <lanzhi_lee@163.com>",
   "homepage": "",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "typings": "dist/esm/index.d.ts",
   "directories": {
-    "lib": "lib"
+    "dist": "dist"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "tsc:cjs": "tsc -p ./tsconfig.json --module commonjs --outDir dist/cjs",
+    "tsc:esm": "tsc -p ./tsconfig.json --module esnext --outDir dist/esm --declaration true",
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && npm run tsc:cjs && npm run tsc:esm",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "axios": "^0.21.4"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
     "prettier": "^2.4.1",
     "typescript": "^4.4.3"
-  },
-  "dependencies": {
-    "axios": "^0.21.4"
   }
 }
